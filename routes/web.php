@@ -14,11 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::resource('/info','ClientController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/asd',function(){
+
+
+/*Route::get('/asd',function(){
     if(!function_exists('get_avatar')){
         function get_avatar($str){
             $acronym="";
@@ -36,3 +38,4 @@ Route::get('/asd',function(){
 Route::get('/num',function(){
     return(str_pad(99, 5, '0', STR_PAD_LEFT));
 });
+*/
